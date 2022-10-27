@@ -59,7 +59,7 @@ namespace Servicios.api.Libreria
                     rule.AllowAnyHeader().AllowAnyMethod().WithOrigins("*");
                 });
             });
-        
+
 
         }
 
