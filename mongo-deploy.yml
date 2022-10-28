@@ -21,7 +21,7 @@ spec:
       containers:
         - name: microservice-libreria-app
           image: mongo:4.2.12
-          comand:
+          command:
           - /bin/bash
           - -c
           env:
