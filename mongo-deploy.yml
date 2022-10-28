@@ -5,20 +5,20 @@ metadata:
   labels: 
     name: mongo-deploy
     app: microservice-libreria
-  spec:
-    replicas: 1
-    selector: 
-      matchLabels:
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: microservice-libreria
+      name: mongo-pod
+  template:
+    metadata:
+      name: mongo-pod
+      labels: 
         app: microservice-libreria
         name: mongo-pod
-      template:
-        metadata:
-        name: mongo-pod
-        labels: 
-          app: microservice-libreria
-          name: mongo-pod
-      spec:
-        containers:
+    spec:
+      containers:
         - name: microservice-libreria-app
           image: mongo:4.2.12
           comand:
