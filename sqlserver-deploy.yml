@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: mssql-deploy
   labels:
-    name:mssql-deploy
+    name: mssql-deploy
     app: microservice-seguridad
 spec:
   replicas: 1

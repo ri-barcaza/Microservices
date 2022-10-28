@@ -5,7 +5,7 @@ metadata:
   labels:
     name: microservice-libreria-deploy
     app: microservice
- spec:
+spec:
   replicas: 2
   selector: 
     matchLabels: 
