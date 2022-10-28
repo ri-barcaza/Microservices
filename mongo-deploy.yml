@@ -5,29 +5,29 @@ metadata:
   labels: 
     name: mongo-deploy
     app: microservice-libreria
-  spec:
-    replicas: 1
-    selector: 
-      matchLabels:
+spec:
+  replicas: 1
+  selector: 
+    matchLabels:
+      app: microservice-libreria
+      name: mongo-pod
+    template:
+      metadata:
+      name: mongo-pod
+      labels: 
         app: microservice-libreria
         name: mongo-pod
-      template:
-        metadata:
-        name: mongo-pod
-        labels: 
-          app: microservice-libreria
-          name: mongo-pod
-      spec:
-        containers:
-        - name: microservice-libreria-app
-          image: mongo:4.2.12
-          comand:
-          - /bin/bash
-          - -c
-          env:
-          - name: MONGO_INITDB_ROOT_USERNAME
-            value: "ribarcaza"
-          - name: MONGO_INITDB_ROOT_PASSWORD
-            value: "123"
-          ports:
-            - containerPort: 27017
+    spec:
+      containers:
+      - name: microservice-libreria-app
+        image: mongo:4.2.12
+        comand:
+        - /bin/bash
+        - -c
+        env:
+        - name: MONGO_INITDB_ROOT_USERNAME
+          value: "ribarcaza"
+        - name: MONGO_INITDB_ROOT_PASSWORD
+          value: "123"
+        ports:
+          - containerPort: 27017
