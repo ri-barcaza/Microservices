@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: gateway-app
-        image: ribarcaza/serviciosapigateway:latest
+        image: ribarcaza/serviciosapigateway:v2.#{Build.BuildId}#
         ports:
           - containerPort: 80

@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: microservice-libreria-app
-        image: ribarcaza/serviciosapilibreria:latest
+        image: ribarcaza/serviciosapilibreria:v2.#{Build.BuildId}#
         ports:
           - containerPort: 80
         env:
